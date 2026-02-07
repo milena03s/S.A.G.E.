@@ -9,21 +9,32 @@ class MainApp extends StatelessWidget {
 
 @override
 Widget build(BuildContext context) {
-  return const MaterialApp(
-    title: 'SAGE',
-    home: Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            TitleSection(
-              name: 'SAGE',
-              location: 'ia que te ajuda a passar em calculo (se vc estudar)',
+return MaterialApp(
+  title: 'SAGE',
+  home: Scaffold(
+    body: Center(
+      child: SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center, // Centraliza verticalmente
+        children: [
+          TitleSection(name: 'SAGE', location: 'ia que te ajuda a passar em calculo'),
+          const SizedBox(height: 50), // Espaço entre o título e o botão
+          Center(
+            child: SizedBox(
+              width: 250,
+              height: 80,
+              child: ElevatedButton(
+                onPressed: () {}, 
+                child: const Text('Nova Questão'),
+              ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     ),
-  );
+    ),
+  ),
+);
 }
 }
 
@@ -63,5 +74,3 @@ class TitleSection extends StatelessWidget {
     );
   }
 }
-
-
